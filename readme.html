@@ -175,16 +175,28 @@
     padding: 24px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    margin: 20px 0;
+    margin: 20px auto;
     text-align: center;
+    width: min(1280px, calc(100vw - 56px));
+    margin-left: calc(50% - min(640px, calc(50vw - 28px)));
+    margin-right: calc(50% - min(640px, calc(50vw - 28px)));
+  }
+  .mermaid svg {
+    max-width: 100% !important;
+    height: auto !important;
+    width: 100%;
   }
 
   .figure-caption {
     text-align: center;
     color: var(--muted);
     font-size: 13px;
-    margin: -10px 0 28px;
+    margin: -10px auto 28px;
     font-family: "PingFang TC", sans-serif;
+    width: min(1280px, calc(100vw - 56px));
+    margin-left: calc(50% - min(640px, calc(50vw - 28px)));
+    margin-right: calc(50% - min(640px, calc(50vw - 28px)));
+    padding: 0 24px;
   }
 
   .stat-row {
@@ -229,6 +241,16 @@
     color: var(--muted);
     font-size: 13px;
     font-family: "PingFang TC", sans-serif;
+  }
+
+  @media (max-width: 880px) {
+    .mermaid, .figure-caption {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .figure-caption { padding: 0; margin-top: -10px; margin-bottom: 28px; }
+    .mermaid { margin-top: 20px; margin-bottom: 20px; }
   }
 
   @media (max-width: 600px) {
