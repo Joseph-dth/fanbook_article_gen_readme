@@ -187,6 +187,22 @@
     width: 100%;
   }
 
+  .mermaid.mermaid-compact {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mermaid.mermaid-compact svg {
+    width: auto;
+    max-width: 100% !important;
+  }
+  .figure-caption.figure-caption-compact {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
   .figure-caption {
     text-align: center;
     color: var(--muted);
@@ -590,7 +606,7 @@ platform = "threads"   # 或 ig / fb / general</code></pre>
 
 <p>我們的設計把「找書」拆成兩個截然不同的步驟，每一步用最適合它的技術：</p>
 
-<div class="mermaid">
+<div class="mermaid mermaid-compact">
 flowchart TD
   Q[卡點：「AA 在親密關係裡定義了什麼是『我們』」]:::input
 
@@ -615,7 +631,7 @@ flowchart TD
   classDef input fill:#fef9e7,stroke:#b14d2c,stroke-width:2px
   classDef output fill:#e8f3ed,stroke:#3d8b6f,stroke-width:2px
 </div>
-<div class="figure-caption">圖 2：兩層檢索 — 第一層用 LLM 抓抽象思想，第二層用向量找具體文字</div>
+<div class="figure-caption figure-caption-compact">圖 2：兩層檢索 — 第一層用 LLM 抓抽象思想，第二層用向量找具體文字</div>
 
 <h3>為什麼一定要分兩層</h3>
 
