@@ -1,0 +1,17 @@
+[project]
+name = "book-article-gen"
+version = "0.1.0"
+description = "Multi-agent pipeline that turns a topic into multi-version long-form articles, grounded in a local book library via two-layer retrieval."
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "claude-agent-sdk>=0.1.0",
+    "chromadb>=0.5.0",
+    "sentence-transformers>=3.0.0",
+    "beautifulsoup4>=4.12.0",
+    "click>=8.1.0",
+    "anyio>=4.0.0",
+    "anthropic>=0.101.0",
+]
+
+[tool.uv]
+package = false

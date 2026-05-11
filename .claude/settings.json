@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '/<div class=\"mermaid\">/,/<\\\\/div>/' /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen/readme.html)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen status)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen log --oneline -10)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen diff readme.html)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen show 7d286f1 --stat)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen show 7d286f1 -- readme.html)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen push)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen add readme.html)",
+      "Bash(git -C /Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen commit -m ' *)"
+    ]
+  }
+}

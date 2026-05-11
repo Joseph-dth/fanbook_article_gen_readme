@@ -1,0 +1,439 @@
+{
+  "title": "《可複製的領導力》",
+  "subtitle": "輕鬆掌握領導力，打造核心競爭力",
+  "nodes": [
+    {
+      "type": "section",
+      "label": "❶",
+      "text": "什麼是可複製的領導力",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "領導力是可以學會的",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "誤區：領導力是一種「感覺」",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "每個人都可以具備領導力",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "工具化：西方管理講求步驟",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "可複製：簡單易用，隨時轉移",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "員工的執行力等於領導者的領導力",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "「執行力」是個偽概念",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❷",
+      "text": "領導和管理的區別",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "領導者的核心驅動力",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "管理的核心驅動力是怕",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "領導的核心驅動力是尊敬與信任",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "遊戲改變領導力",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "共同目標：目標明確方向，帶來凝聚力",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "及時反饋：員工參與感產生價值感",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "清晰明確的規則：有規可循、有章可守",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "自願參與",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❸",
+      "text": "溝通視窗",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "定義",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "Johari Window，將人際溝通的資訊比作一個窗子，它被分為四個區域（象限）",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "四個象限",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "公開象限：自己知道，他人也知道",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "公開象限最大",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "隱私象限：自己知道，他人不知道",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "忘記說的秘密、知識的詛咒",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "心照不宣的秘密",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "DDS（又深又暗的秘密）",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "盲點象限：自己不知道，他人知道",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "潛能象限：自己、他人都不知道",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "調整方法",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "擴大公開象限",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "自我揭示",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "激發潛能象限",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "懇求反饋",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❹",
+      "text": "管理者角色",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "管理者定義",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "通過別人來完成工作的人",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "三種角色",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "領導者角色",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "營造氛圍",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "管理者角色",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "避免「事必躬親」",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "執行者角色",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "給出結果",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "三個層次的管理者",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "下層執行：使命必達",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "中層管理：面面俱到",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "上層領導：營造氛圍",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❺",
+      "text": "領導力技術",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "傾聽、提問是一門學問",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "傾聽時，需要深呼吸、專注",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "提問時，要多提開放性問題，少提封閉性問題",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "反饋的分類",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "正面反饋與負面反饋",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "正面反饋：好評",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "負面反饋：對事不對人",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "反饋的三個層級",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "零級反饋：看見了也不說",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "一級反饋：只看評價，不給理由",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "二級反饋：既給評論，也給理由",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "二級反饋的 BIC 工具",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "Behavior（行為）",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "關注事實，而非觀點",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "Impact（影響）",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "短期後果",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "Consequence（後果）",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "長期影響",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "和員工自己掛鈎",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

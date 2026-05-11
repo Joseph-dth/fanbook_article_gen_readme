@@ -1,0 +1,505 @@
+{
+  "title": "《人生只有一件事》思維導圖",
+  "subtitle": "若人生只有一件事，你希望它是什麼？",
+  "nodes": [
+    {
+      "type": "chapter",
+      "label": "❶",
+      "text": "從我開始修煉",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "看見我自己",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "最不了解自己的人原來是自己",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "好好享受做小事",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "去除妄想",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "走出舒適圈，重新學習人生",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "找到懶慢的源頭",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "警覺自我感覺良好",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "分清自己的事、今天的事和別人的事",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "可以不一樣",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "臣服於生命，為德不孤",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "除了活好，也活出別的事",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "放下評判心，活在當下",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "為自己設置叫停機制",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "愛自己，來自檢視和修正",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "治療焦慮的方法：接受、行動或放下",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "轉動的心念",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用意志去面對發生的每一件事",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "想辦法看見自己在想什麼",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "心隨境轉、心不隨境轉、心能轉境",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "人生沒有不得不",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "戒掉好為人師",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "觀照你的心念，因為它很快會變成你的思想",
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "❷",
+      "text": "更好的自己",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "自我的突破",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "突破的時機：察覺自己的不足",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "突破的路徑：內外相生相成",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "突破的速度：慢到難以察覺，逐漸加速",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "麻煩是人生的重要線索，提醒你人生的功課沒修煉完",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "不要證明自己厲害，而要一心成全別人",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "為道日損，給自己打分",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "在跟隨中突破自己的限制",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "認識別人成為了解自己的鏡子",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "認錯是人生必修課",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "高效能人生",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "「聽」比「說」更有效能",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "等待被邀請，隨時準備好發光發熱",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對任何人都感謝，尤其對和你過不去的人；累了？不妨加碼試試看",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "向高手學習人生智慧",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "還在學活好",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "面對發脾氣的人，接收求救信號",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "只要對方需要，隨時可以說對不起",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用心聽別人說話",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "真正的讚美是給出靈魂當下最需要的養分",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "讚美不是技巧和方法，而是「無我」",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "感恩之心是生命中最強大的力量",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "全然的信任是每個人與生俱來的品質",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "計較讓你錯過人間的緣分",
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "❸",
+      "text": "修煉的智慧",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "家庭的修煉",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "延續勤勞樸實、善解人意的「善根」",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "只有持續性的，出於靈魂深處，帶著愛的能量的「做」與「說」，才具備真實的影響力",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "做自己的貴人，能自貴者，人恆貴之",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "教出好子女，不是靠資源和條件，而是靠德行",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "把擔心時間放下，把關心時間提起",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "孝順中的「順」，是接受、是理解和感恩",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "孝道傳承，最簡單的方法就是孝順父母，做子女的榜樣",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "職場的修煉",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "在工作中找到對自己和他人的意義所在",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "心真則事真，願、知、行則真",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用童真的眼光、無所拘束的本性重新體驗世界，培養洞察力",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "事上修心，以假修真",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "願意假戲真做，在沒樂趣中找樂趣，在沒意義中找意義",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "隨性、隨緣、隨遇、隨喜",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "領導的修煉",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "把心放在「人」上",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "讓自己少使用權力，多開發力量",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "歸零是讓過去不成為包袱，反而成為滋養",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "心量大者必承擔大、承擔大者必認識「心量大」",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "高位者的價值觀影響著其他人，必須自己內在想要的、相信的、感受的完全一致",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "建立良好的關係，需要空間距離感，讓人各得其所，攜手同行",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "要讓團隊成為一個「願意」的團隊，只有一個方法：你要願意先說「我不對」",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "企業的修煉",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "要創造落地生根、長長久久的企業文化，關鍵就在「化性」兩個字上",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "當能把誠信、卓越和分享的精神做到極致，創新是自然的結果",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "打開覺知，帶著感受，反求諸己，全然投入地面對發生的每件事、每個地方",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "有心的企業，才能追求極致的價值，而不僅是追求極致的效率",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "傳承這件大事唯有用「心」，才能「以心傳心」",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "一流人才境界與格局兼備，又謙虛，又有意志力",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "經營者最重要的修煉，就是讓自己成為「令人歡喜」之人",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "組織的秘密就是：境隨心轉，心想事成",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

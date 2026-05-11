@@ -1,0 +1,514 @@
+{
+  "title": "《逆商》思維導圖",
+  "subtitle": "我們該如何應對事件",
+  "nodes": [
+    {
+      "type": "section",
+      "label": "❶",
+      "text": "為什麼需要逆商",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "人生在不斷地穿越逆境",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "什麼是逆商：完整的新體系",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "新的知識框架",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "衡量方法",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "實踐工具",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "向成功攀登過程中的三類人：放棄者、紮營者、攀登者",
+          "children": null
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "逆境困局與成功之樹",
+          "children": null
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "身處逆境時代",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "逆境的三個層次：人才、職場、社會",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "累積效應：日積月累的變化的巨大影響",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "危機的四條岔道",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "攀登者變紮營者：停止努力、安於現狀",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "科技萬能：寄希望於未來科技",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "打雞血：熱血勵志",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "無助-無望的絕望循環",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❷",
+      "text": "認識逆商",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "逆商的CORE四維度",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "掌控感",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "擔當力",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "影響度",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "持續性",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "逆商的三大支柱",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "支柱一：認知心理學",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "習得性無助",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "歸因理論和樂觀精神",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "抗逆性能力",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "心理韌性",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "內外控傾向",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "支柱二：健康新論（心理神經免疫學）",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "傳遞情緒的化學物質會影響人的身體健康",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "支柱三：腦科學（神經生理學）",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "習慣的神奇力量",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❸",
+      "text": "提高逆商",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "LEAD工具",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "利用LEAD工具增強掌控感，擊退消極情緒",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "什麼是LEAD工具",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "L-Listen 傾聽自己的逆境反應",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "E-Explore 探索自己對結果的擔當",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "A-Analyze 分析證據",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "D-Do 做點事情",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "LEAD工具的應用",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "溺水法",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "引導自己抵抗重大挫折",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "避開受害者心態陷阱",
+                  "children": null
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "障礙物",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "停止思想的災難化：止念法",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "分心法",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "停止蔓延",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "關注不相干事物",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "彈走負面思想",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "積極的干擾",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "通過運動改變狀態",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "重塑法",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "明確目標",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "渺小化",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "幫助他人",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "幫助他人提高逆商",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用LEAD工具引導朋友",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "引導他人的本質：提問，而非說教；不僅是傾聽；避開建議的陷阱；重新思考領導者的角色",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用LEAD工具引導一位同事",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用LEAD工具引導孩子學會擔當",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用LEAD工具引導他人的潛在益處",
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❹",
+      "text": "打造高逆商的組織",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "運用逆商的時機",
+          "children": null
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "變革曲線和競爭優勢",
+          "children": null
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "領導者面臨的挑戰",
+          "children": null
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "組織的逆商",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "逆商對組織成功所發揮的作用",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "創建高逆商組織過程中的障礙",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "課後生活：哪裡出了錯",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "摧毀下屬逆商的22種做法",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "攀登型組織",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "提升下屬逆商的44種方法",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "工作中的逆商",
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❺",
+      "text": "攀登者的習慣",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "豪威爾的能力水平五階段",
+          "children": null
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "影響成功的兩個因素",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "重要性",
+              "children": null
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "難度",
+              "children": null
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "借助逆商實現願景",
+          "children": null
+        }
+      ]
+    }
+  ]
+}

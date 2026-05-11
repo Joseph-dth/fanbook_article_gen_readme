@@ -1,0 +1,400 @@
+{
+  "title": "納瓦爾寶典",
+  "subtitle": "關於獲得財富與幸福的人生箴言",
+  "nodes": [
+    {
+      "type": "section",
+      "label": "❶",
+      "text": "獲得財富",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "財富的本質",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "財富是你睡著了之後，依然能創造金錢的東西",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "如何獲得財富",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "把自己產品化",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "自己：找到自己的獨特性和專長",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "產品化：找到放大自我能力的槓桿",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "三大槓桿",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "勞動力槓桿：僱傭、辦廠等",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "資本槓桿：投資、理財等",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "邊際成本為零的載體：程式碼、電影、書、媒體等",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "如何實現槓桿效應",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "找熱愛、不跟風",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "用頭腦賺錢，而非時間",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "培養判斷能力與洞察能力",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "退休狀態",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "退休的定義",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "不再為了想像中的明天而犧牲今天",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "活在當下，內心充盈地度過每一天",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "如何進入退休狀態",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "增加存款",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "降低開銷",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "去做熱愛的事情，當你樂在其中時，就達到了退休狀態",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❷",
+      "text": "獲得幸福",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "幸福的定義",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "幸福是一種不需要主動作為的狀態",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "如何獲得幸福",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "剔除缺憾感",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "活在當下，享受此刻",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "接納當下境遇",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "慾望是主動選擇的不開心",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "幸福指數",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "取決於個人生活習慣",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "取決於花時間最多與之相處的人",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "如果想和一個人共度一生，那就一天都不要和他共事",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❸",
+      "text": "自我救贖",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "關愛自己",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "堅持做自己",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "非理性地癡迷於熱愛的事情",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "堅持運動、保持健康",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "冥想",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "冥想的定義",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "冥想是思想意識的間歇性禁食",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "屏蔽社會的噪聲，傾聽自己的聲音",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "冥想的方式",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "徒步旅行",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "寫日記",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "沖澡",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "靜坐",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "解脫",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "從期待中解脫，勇氣就是學會不在乎別人怎麼想",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "從僱傭心態中解脫，找到自己的槓桿",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "從憤怒中解脫，憤怒無效",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "從不受控的思考中解脫",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❹",
+      "text": "人生哲學",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "生命的意義",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "生命的意義需要自己去尋找",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "生命可能沒有意義，一切終將歸於熱寂",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "生命的意義可能是推動宇宙更快走向熱寂",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "我們唯一擁有的是當下",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "過去不可得，未來不可得",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "如果不能安住當下，這一刻又變成了過去",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

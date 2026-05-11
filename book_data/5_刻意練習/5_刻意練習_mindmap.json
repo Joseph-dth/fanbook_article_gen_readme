@@ -1,0 +1,437 @@
+{
+  "title": "刻意練習",
+  "subtitle": "思維導圖",
+  "nodes": [
+    {
+      "type": "chapter",
+      "label": "一、",
+      "text": "教你如何從新手到大師",
+      "children": []
+    },
+    {
+      "type": "chapter",
+      "label": "二、",
+      "text": "天才之謎",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "天才的教育背景",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "莫札特幼年的音樂教育",
+              "children": []
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "天才是環境造就的嗎？",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "大腦對訓練與環境有著驚人的適應能力",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "天才以訓練獲得超凡能力的研究結果",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "心算高手的熟練度，複雜的心智運算是後天培養的",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "以學習鋼琴的孩子為例，大腦皮層的結構發生變化",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "常有機會練習並接受良好指導",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "天才可被掌握",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "儲備知識的「組塊化」——把新資訊整理成有條理的已知模式，從人腦到電腦",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "大量文字資訊結構的組塊化——一旦達到高超的水準，組塊化能力越強",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "大量組塊儲存使思考更有效率",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "不要讓「天生才能」牽著走",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "不要把基因視為限制",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "「天生才能」有誤導性，錯誤認知影響人們正確認識自己的潛力",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "機遇×意願×能力才能獲得更多的成就",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "刻意練習到底是什麼？",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "超越舒適區——每一步都給自己設定能跳一跳夠得著的目標",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對於機械記憶，刻意練習提供了一套有效且完整的機制",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "三、",
+      "text": "人的大腦與心理表徵",
+      "children": [
+        {
+          "type": "section",
+          "label": "❶",
+          "text": "大腦的適應能力",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "有彈性的大腦",
+              "children": []
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "大腦訓練後的變化",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "大腦強化的關聯路徑形成什麼？",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "細胞連接緊密，更有效率運作，專注力提升",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "海馬迴與大腦（倫敦計程車司機的研究）",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "越困難，變化越大，反應越快，記憶越久",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "大腦的適應能力",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "兒童的大腦反應性高",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "成人的大腦仍舊有可塑性，只不過難度增加",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "不要迷信大腦訓練",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "不要輕易相信所謂的「腦力遊戲」",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "對特定挑戰訓練的效應，對不相關的任務幾乎沒有影響",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❷",
+          "text": "心理表徵",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "利用一個特定的想法，與記憶中某種表現的高手形成自動化聯結，一個特別深入、有辦法觸發一連串表現的想法",
+              "children": []
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "心理表徵的特點",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "幫助我們處理訊息",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "幫助我們組織訊息",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "幫助我們詮釋訊息",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "幫助我們決策",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "四、",
+      "text": "如何進行刻意練習",
+      "children": [
+        {
+          "type": "section",
+          "label": "❶",
+          "text": "有目的的刻意練習",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "有目的的練習方法",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "具有特定的、明確的目標",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "有目的的練習是有意識進行的",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "有目的的練習需要及時反饋",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❷",
+          "text": "在工作中重構練習習慣",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "刻意練習針對每一個人——學生、老師——想想自身的動力，你有多渴望進步",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "發展個人最重要的能力，一次一個學習，成長過程中大多數人沒有得到有效訓練",
+              "children": []
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "有效的練習方法",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "找一位老師",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "一次專注一項",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "五、",
+      "text": "標準、路徑與發展",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "黃金標準",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "刻意練習——為每一位學習者量身定制，帶來良好的外部反饋",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "以持續式訓練邁向目標，練習達到最佳表現",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "以一萬小時的刻意練習積累成功",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "成為出色人物的路徑規劃",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "加入大量有組織的刻意練習",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "早年接觸",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "個人化訓練",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "全心投入",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "規劃提升刻意練習的界限",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "努力發展未來還未達到的目標",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "努力思考對人格的影響，我們可以透過心理意象進行練習，做到理想化的自我",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "當技術不斷成熟的時候，找到突破界限的方法",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

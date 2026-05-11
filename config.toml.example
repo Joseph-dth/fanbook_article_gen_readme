@@ -1,0 +1,78 @@
+# book-article-gen 設定檔（複製成 config.toml 修改）
+# 全部欄位都可選；沒寫就用 default。沒有 config.toml 時行為等同舊版。
+
+[output]
+# topic = "AA 制"           # 主題；CLI --topic / --input 仍可覆蓋。設了就能直接 `uv run main.py`
+versions = 3                # CLI --versions 仍可覆蓋這個
+length_tolerance = 0.15     # 字數誤差容忍 ±15%
+default_length = 3500       # 沒指定 length 的版本用這個
+# dir = "./output"          # 輸出根目錄；CLI --output 仍可覆蓋。預設 ./output
+# slug = "AA制"              # 子資料夾名（output_{i}.txt 放在 <dir>/<slug>/）；
+                            # CLI --slug 仍可覆蓋。沒設就從 topic 自動 slugify
+
+# ─── 個別版本指定 ────────────────────────────────────────
+# 想固定每版風格與字數就寫；想全交給總編輯就刪掉這整段。
+# 數量可以少於 versions（剩下的版本由總編輯自挑），不可多。
+#
+# style 必須是這 5 種之一：
+#   story          — 情境長、角色入肉、生活細節密。建議 3000–5000 字
+#   philosophical  — 短句排比、反問層疊、典故類比。建議 3000–5000 字
+#   wisdom-anchor  — 單一典故/誓詞/書本概念當主軸。建議 3000–5000 字
+#   actionable     — 故事鋪陳後接 4 步驟、清單、可執行建議。建議 3000–5000 字
+#   thread         — 台灣 Threads 爆文，第一人稱口語自白。建議 500–1200 字
+
+[[versions]]
+style = "story"
+length = 3500
+
+[[versions]]
+style = "philosophical"
+length = 4500
+
+[[versions]]
+style = "wisdom-anchor"
+length = 6000
+
+# 也可以混 thread:
+# [[versions]]
+# style = "thread"
+# length = 900
+
+# ─── 檢索行為 ──────────────────────────────────────────
+[retrieval]
+books_per_article = 3       # 書籍 agent 從 9 本（未來 500+）裡挑幾本
+passages_per_book = 5       # 每本書檢回幾段原文（passage_search top_k）
+
+# ─── 角色生成 ──────────────────────────────────────────
+[character]
+count = 6                   # 角色 agent 產幾個候選人物（總編輯再從中挑 N 個）
+
+# ─── 社群貼文衍生 ──────────────────────────────────────
+# 開啟後，每篇長文寫完都會多產一個 output_{i}_social.txt：
+# 從原文剪一段「有畫面/情緒/張力」的故事當錨點，改寫成適合貼社群的短版。
+# 不是摘要，是抓住原文最戳人的那個片段獨立呈現。
+[social_post]
+enabled = false             # true 才會生成
+length = 300                # 字數（±15%；fb 平台可放寬到 +25%）
+platform = "general"        # threads / ig / fb / general
+
+# ─── AI 味審查（事後迭代） ──────────────────────────────
+# 開啟後，每篇長文（與社群短文）寫完都會跑 N 輪「審查 → 改寫」：
+# 派一個 ai-free editor 子 agent 用「錨/歪/動」三維度評分 + 標出最壞 3 句 + 給改寫建議，
+# 寫手拿到報告後自己改寫被標出的句子（不整篇重寫）並覆寫檔案。
+# 不開啟時行為完全不變。
+[review]
+enabled = false            # true 才會跑審查迭代
+iterations = 1             # 跑幾輪（0-5）。1 輪通常就能打掉最明顯的 AI 味；3 輪以上會 diminishing return
+
+# ─── Model 配置 ────────────────────────────────────────
+# 改成 "haiku" 全部跑可以省成本但品質會降；改成 "opus" 全部跑最貴但最強
+[models]
+hotspot = "haiku"
+pain_point = "sonnet"
+character = "sonnet"
+book = "opus"               # 概念層需要強推理
+orchestrator = "opus"       # 只規劃不寫稿，但 N 版差異化需要強推理
+writer = "opus"             # 真正寫稿的 agent。要省成本可以改 sonnet
+reviewer = "sonnet"         # AI 味審查 agent（僅在 review.enabled = true 時用到）
+social = "sonnet"           # 社群貼文 agent (僅在 social_post.enabled = true 時用到)

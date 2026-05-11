@@ -1,0 +1,264 @@
+{
+  "title": "心態致勝",
+  "subtitle": "《終身成長》思維導圖",
+  "nodes": [
+    {
+      "type": "subtitle",
+      "label": null,
+      "text": "成長型思維決定你的人生能走多遠",
+      "children": []
+    },
+    {
+      "type": "chapter",
+      "label": "❶",
+      "text": "思維模式",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "人的兩種思維模式",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "固定型思維模式",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "成長型思維模式",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "兩種思維模式的區別",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對自身評價的準確度不同",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對成功的看法不同",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對失敗的看法不同",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對努力的看法不同",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "腦波不同",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "❷",
+      "text": "能力和成就的真相",
+      "children": [
+        {
+          "type": "detail",
+          "label": null,
+          "text": "固定型思維模式限制人的成就",
+          "children": []
+        },
+        {
+          "type": "detail",
+          "label": null,
+          "text": "成長型思維模式幫助人發展能力、取得成就",
+          "children": []
+        },
+        {
+          "type": "detail",
+          "label": null,
+          "text": "案例：醫科大學預科班學生的不同思維模式",
+          "children": []
+        },
+        {
+          "type": "detail",
+          "label": null,
+          "text": "案例：加菲爾德高中的差生逆襲",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "❸",
+      "text": "思維模式在不同領域的體現",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "體育：冠軍的思維模式",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "案例：麥可·喬丹、皮特·山普拉斯",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "商業：思維模式和領導力",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "領導力與固定型思維模式",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "案例：李·艾科卡、傑弗瑞·史基林",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "領導力與成長型思維模式",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "案例：傑克·威爾許、郭士納",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "人際關係：人們相處的思維模式",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "愛情關係中的思維模式",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "案例：夏琳和麥克斯的愛情",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "社交中的思維模式",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "案例：害羞的齊治",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "教育：思維模式和教育",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "父母教育的思維模式",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "案例：桑迪父母的哈佛夢",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "老師教育的思維模式",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "案例：拒絕學習的薔薇變了",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "❹",
+      "text": "培養成長型思維模式",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "如何將成長型思維模式傳授給他人",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "掌握稱讚的方法",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "正確面對孩子遇到的挫折",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "重視孩子對知識的深入理解",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "通往成長型思維模式的四個步驟",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "接受、觀察、命名、教育",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

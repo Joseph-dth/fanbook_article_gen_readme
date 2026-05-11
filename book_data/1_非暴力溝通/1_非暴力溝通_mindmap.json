@@ -1,0 +1,240 @@
+{
+  "title": "《非暴力溝通》思維導圖",
+  "subtitle": "高情商聊天術，助你生活如魚得水",
+  "nodes": [
+    {
+      "type": "section",
+      "label": "❶",
+      "text": "認識非暴力溝通",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "概念",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "非暴力溝通是一種充滿愛的溝通方式，旨在不斷提醒我們要專注於彼此的感受、需要和請求"
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "背景故事",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "馬歇爾·盧森堡博士作為美國人，前往巴勒斯坦進行演講，現場發生了充滿仇恨的衝突"
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "馬歇爾博士運用非暴力溝通的方式，與聽眾達成了真正的和解，化解了衝突"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❷",
+      "text": "暴力溝通的成因",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "道德評判",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "我們經常對陌生人的行為進行道德評判，如「沒素質」「道德低下」等評論"
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "而我們對熟悉的人的行為，也會習慣性地理解為「你不尊重我」「你不關心我」"
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "與他人比較",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "常見的場景：用比較的方法來教育孩子，例如用「別人家的小孩」來批評自己的孩子"
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "這種與他人比較的溝通方式容易給對方造成內心創傷，進而發展出暴力溝通"
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "回避責任",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "用「不得不」的理由來回避自己的責任，例如有的家長覺得自己不得不盯著孩子學習"
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "當你陷入「不得不」的情緒時，逼著對方也容易成為「不得不」，這樣雙方都會感到痛苦"
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "強人所難",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "威脅他人必須聽從自己的話，這也是生活中最常見的暴力來源"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "label": "❸",
+      "text": "非暴力溝通的四要素",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "觀察",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "學會區分事實和評論，事實是最不容易引起對方反彈的東西，而評論往往帶有情緒"
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "應用場景",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "小張一週遲到三次，這是事實"
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "小張是個壞員工，不好好工作，這是評論"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "感受",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "難過、痛苦、孤獨、慌亂、開心等都是感受"
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "體會和表達感受，而非評判。當你能表達自己的感受，才能和別人溝通你的真實想法"
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "應用場景",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "「你每天十一點後才回家，讓我很難過/很孤獨」"
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "「我覺得你根本不照顧咱們家，我覺得你把咱們家當旅館」"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "需求",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "找到感受的根源，體會他人和自己的感受，而非責備自己或他人"
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "應用場景",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "「我希望你每週能夠有三天早點回家」"
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "「你最好別回來」"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "請求幫助",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "明確談話的目的，越具體越好，說出你想要什麼，而不是說不要什麼；提出了要求以後，請求對方反饋"
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "應用場景",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "「我希望你以後能夠每週跟我吃兩次飯，給我送一次花」"
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "「你以後對我好一點」"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,510 @@
+{
+  "title": "《關鍵對話》思維導圖",
+  "subtitle": "掌握關鍵對話的技巧，在高風險情境中實現有效溝通",
+  "nodes": [
+    {
+      "type": "chapter",
+      "label": "一、",
+      "text": "初步認識關鍵對話",
+      "children": [
+        {
+          "type": "topic",
+          "label": null,
+          "text": "關鍵對話的特點",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對話雙方的觀點有很大差距",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對話存在著強烈的訴求",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對話雙方的情緒非常激烈",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "何謂關鍵對話",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "人們通常面對兩類反應",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "生活中遭遇關鍵對話時，我們之所以無法採取相應對策，是因為有時沒有意識到其重要性",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "關鍵對話",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "topic",
+          "label": null,
+          "text": "掌握關鍵對話",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "最好的溝通方式是直接",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "對話技巧是可以學習的",
+              "children": []
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "關鍵對話不只是管理課，學好了是受益終身的",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "二、",
+      "text": "如何進行關鍵對話",
+      "children": [
+        {
+          "type": "section",
+          "label": "❶",
+          "text": "從「心」開始",
+          "children": [
+            {
+              "type": "detail",
+              "label": null,
+              "text": "明確自己的真正目的",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "思考什麼才是最終的目標",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "識別自身行為的常見失誤做法",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "我們為自己、他人以及人際關係想要什麼",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "找到你的真正目的，包括該怎麼做",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "detail",
+              "label": null,
+              "text": "觀察對話的發展方向，及時應對",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❷",
+          "text": "注意觀察",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "警惕對決局面",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "學會辨別安全問題的信號",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "學會觀察識別的方式技巧",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "應對方式的技能",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "學會辨別安全問題的信號",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "學會收回強硬方式的技巧",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❸",
+          "text": "保證安全",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "警惕對話的不安全狀態",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "安全感就是要有一個共同的目的",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "了解對話目的是否安全，面對時才能掌握",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "如何應對安全感的方法",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "透過增進對話的安全感來恢復安全感",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "如何挽救情緒劇烈波動的局面，提升應對方法",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❹",
+          "text": "控制想法",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "轉化對話",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "探究消極想法產生的根源",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "掌握產生積極想法的準則",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "真正了解這個人",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "感受被理解，情感才能清晰",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "分享爭論的觀點",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❺",
+          "text": "陳述觀點",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "如何描述情緒",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "「內容」方面的技巧：事實才是日常爭論的內容",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "掌握更有效力的分享技巧",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "「方式」方面的技巧",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "要有強而有力的結論",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❻",
+          "text": "了解動機",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "了解對方",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "首先探索對方的態度",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "循循善誘的手段",
+                  "children": [
+                    {
+                      "type": "detail",
+                      "label": null,
+                      "text": "確認反應",
+                      "children": []
+                    },
+                    {
+                      "type": "detail",
+                      "label": null,
+                      "text": "主動引導",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "如何將關鍵對話帶向行動結果",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❼",
+          "text": "開始行動",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "決策的步驟",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "命令式",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "指導式",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "商議式",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "委任式",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "決策的有效方式",
+              "children": []
+            },
+            {
+              "type": "topic",
+              "label": null,
+              "text": "決策完成的環節",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chapter",
+      "label": "三、",
+      "text": "案例分析與應用",
+      "children": [
+        {
+          "type": "section",
+          "label": "❶",
+          "text": "案例分析",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "17個複雜案例",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "性騷擾批評、情緒擔當、預防騷擾案例、跨部門任務",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "團隊要求、私人危機、領導任務分配、個人待辦清單",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "老闆表現、員工清單等",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "鄰里相處、醫師直接看朋友診療",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "逃避親密關係、意外許諾、文字遊戲",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "各種問題纏身的人",
+                  "children": []
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "文字遊戲",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "label": "❷",
+          "text": "綜合應用",
+          "children": [
+            {
+              "type": "topic",
+              "label": null,
+              "text": "關鍵對話的準備和學習工具",
+              "children": [
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "兩大法寶",
+                  "children": [
+                    {
+                      "type": "detail",
+                      "label": null,
+                      "text": "注意觀察",
+                      "children": []
+                    },
+                    {
+                      "type": "detail",
+                      "label": null,
+                      "text": "營造安全感",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "detail",
+                  "label": null,
+                  "text": "如何營造關鍵對話",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
