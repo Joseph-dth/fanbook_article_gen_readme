@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>book-article-gen ｜ 多 Agent 文章生成系統</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #fafaf7;
+    --muted: #6e6e6e;
+    --accent: #b14d2c;
+    --accent-soft: #f3e3da;
+    --card: #ffffff;
+    --line: #e6e3dd;
+    --code-bg: #f5f2ec;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC", "PingFang TC", Georgia, serif;
+    line-height: 1.75;
+    font-size: 17px;
+  }
+  .wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 64px 28px 120px;
+  }
+  header.top {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 28px;
+    margin-bottom: 44px;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    font-family: "PingFang TC", -apple-system, sans-serif;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin: 12px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  .lede {
+    font-size: 19px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+  h2 {
+    font-size: 26px;
+    margin: 56px 0 16px;
+    letter-spacing: -0.005em;
+    border-top: 1px solid var(--line);
+    padding-top: 40px;
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 { font-size: 19px; margin: 32px 0 8px; }
+  p { margin: 0 0 16px; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 8px; }
+  code {
+    background: var(--code-bg);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    font-size: 0.88em;
+  }
+  pre {
+    background: var(--code-bg);
+    padding: 16px 20px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  pre code { background: none; padding: 0; }
+
+  .agents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 24px 0 8px;
+  }
+  .agent-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 18px 16px;
+  }
+  .agent-card .role {
+    font-family: "PingFang TC", sans-serif;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .agent-card .name {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .agent-card .desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .agent-card .model {
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .callout {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 18px 22px;
+    margin: 28px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout strong { color: var(--accent); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 24px 0;
+  }
+  .two-col .col {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 18px 20px;
+    border-radius: 8px;
+  }
+  .two-col .col h4 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--accent);
+    font-family: "PingFang TC", sans-serif;
+  }
+  .two-col .col p { font-size: 14px; color: var(--ink); margin: 0; line-height: 1.7; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    font-family: "PingFang TC", sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    background: var(--code-bg);
+  }
+
+  .mermaid {
+    background: var(--card);
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .figure-caption {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin: -10px 0 28px;
+    font-family: "PingFang TC", sans-serif;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .stat .num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+  }
+  .stat .label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+    font-family: "PingFang TC", sans-serif;
+  }
+
+  .quote {
+    border-left: 3px solid var(--line);
+    padding-left: 20px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: 15px;
+    margin: 18px 0;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+    font-family: "PingFang TC", sans-serif;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 36px 18px 80px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">book-article-gen</div>
+  <h1>用五個 AI 各司其職寫出一篇好文章</h1>
+  <p class="lede">給一個主題（例如「AA 制」），這個系統會自動產出 N 個版本的長文章。每個版本有不同的角色視角、不同的智慧錨點、不同的敘事風格。背後不是一個 AI 在寫，是六個專業分工的 AI Agent 一起協作完成 — 從找熱點、挖卡點、產角色、選書，到主編規劃版面、寫手實際寫稿。寫完還可選用另兩個 Agent：一個用「錨／歪／動」三維度自動審查 AI 味並迭代修改，一個剪出社群短版貼文。</p>
+</header>
+
+<h2>一句話：這個系統在做什麼</h2>
+
+<div class="two-col">
+  <div class="col">
+    <h4>輸入</h4>
+    <p>一個主題字串，例如：<br><code>「AA 制」</code><br><code>「同居前要不要簽協議」</code><br><code>「原生家庭傷害」</code></p>
+  </div>
+  <div class="col">
+    <h4>輸出</h4>
+    <p>N 個版本的長文章（3000–5000 字），每版角色、智慧錨點、風格都不同。例如三版分別是：故事體 + 哲思體 + 典故體。</p>
+  </div>
+</div>
+
+<p>傳統做法是：給 AI 一個主題，叫它寫文章。問題是這樣寫出來的東西很平、千篇一律、缺少深度。</p>
+
+<p>我們的做法是：把「寫一篇好文章」拆成編輯部裡會出現的六種角色，每個角色用一個 AI Agent 扮演，讓他們協作分工。</p>
+
+<h2>為什麼要六個 Agent，不是一個？</h2>
+
+<p>一個 AI 同時要當熱點觀察者、卡點思考者、角色塑造者、博覽群書者、規劃調度者、實際寫稿者，會發生什麼事？答案是：每件事都做到 70 分，沒有一件 90 分。</p>
+
+<p>但如果讓六個 AI 各做一件事，每個 AI 只專注在自己的視角上，整體品質就會跳起來。這就像真實的編輯部：寫稿的人不負責找選題，找選題的人不負責採訪，採訪的人不負責編輯定稿，總編輯不親自寫每一篇。</p>
+
+<div class="callout">
+<strong>核心隱喻：</strong>把你的腦袋拆成六個專家，他們在你腦袋裡開會。每個人發言時別人不打斷，總編輯整合所有人的意見、為每個版本下指令，然後交給寫手實際成稿。
+</div>
+
+<h2 id="planner-vs-writer">為什麼把「規劃」跟「寫稿」拆成兩個 Agent？</h2>
+
+<p>這是這個系統最近一次的重要重構。一開始，總編輯既規劃 N 個版本的差異化、又親自連續寫出 N 篇文章 — 全部塞在同一個 conversation。看起來最直覺，但實際跑下來會出現一個明顯問題：</p>
+
+<div class="callout">
+<strong>後幾版越寫越像前幾版。</strong>當 N = 12，寫第 10 版時，total context 裡同時躺著前 9 篇完整內文 + 4 個 agent 的原始輸出。LLM 的 attention 會被既有 context 拉走 — 開頭套路化、用字重複、舉的例子在繞圈、原本想要的「角色 / 書 / angle 對比鮮明」被稀釋成「都長差不多」。
+</div>
+
+<p>解法是把「規劃」和「寫稿」徹底分離成兩個 agent：</p>
+
+<ul>
+  <li><strong>總編輯 = 規劃</strong>：開完編輯部會議後，為每一版產出一份完整的 dispatch JSON（角色 / 書 / 風格 / 字數 / 這版的獨特切入角度 / 要避開什麼）。他不寫任何一個字。</li>
+  <li><strong>寫手 = 執行</strong>：每篇文章交給一個獨立的 <code>寫手</code> subagent。每個寫手都是<strong>全新 session</strong> — 只看到自己這篇的 dispatch JSON，看不到其他版本、看不到前面的對話、context 天然乾淨。</li>
+</ul>
+
+<p>這個拆法解決了三件事：</p>
+
+<ol>
+  <li><strong>Context 不再污染</strong>：每篇寫手只專心寫自己這篇，沒有「我剛剛已經這樣開頭過了，這次要不一樣」的負擔 — 因為他根本不知道有「剛剛」。</li>
+  <li><strong>總編輯的腦袋也乾淨了</strong>：他不再需要把 N 篇 3000 字內文背在 context 裡。即使 N = 20，他的 context 也只有 N 份 dispatch + N 份回收，可以專心做「差異化品管」這件事。</li>
+  <li><strong>差異化變成顯式產物</strong>：以前「N 版要對比鮮明」只是 prompt 裡的訴求，模型做沒做得到沒人看得見。現在每版的 <code>angle_hint</code> 和 <code>avoid</code> 是寫在 dispatch JSON 裡的明文 — 總編輯派發之前自己會檢查「N 個 hint 是不是真的不一樣」，不通過就重排。</li>
+</ol>
+
+<div class="callout" style="background: #f3e3da; border-left-color: #b14d2c;">
+<strong>真實編輯部的類比：</strong>主編開完選題會後不會親自寫 12 篇稿。他會把每篇的角度、訪談對象、字數寫成派稿單，分給 12 個寫手各自去寫。寫手之間互不干擾 — 這才是專業編輯部的工作流。
+</div>
+
+<h2 id="ai-free-review">事後審查：用「錨／歪／動」打掉 AI 味（選用）</h2>
+
+<p>寫手寫出來的初稿即使結構對、角色立得起來、書引得到位，讀起來常常還是有一種「太工整、太順、太像文案」的味道。對仗句一句接一句、「○○感／○○性」滿天飛、所有事都發生在「某個午後」。這就是 AI 味。</p>
+
+<p>我們的做法是接一個現成的審查工具：<strong>ai-free-editor</strong>（從社群作者那邊拿來的 skill）。它的設計哲學很乾淨：</p>
+
+<ul>
+  <li><strong>三個維度量 AI 味：</strong><strong>錨</strong>（有沒有具體時間、地點、人名、感官細節）／<strong>歪</strong>（句子節奏對不對稱，AI 寫東西像被熨斗燙過）／<strong>動</strong>（用動詞推進還是用名詞鋪面）</li>
+  <li><strong>不整篇重寫</strong>：只標出最壞的 3 句、給改寫建議、一句話總結病灶。剩下的留給作者自己改</li>
+  <li><strong>事後審查，不事前約束</strong>：作者明確警告，把規則硬塞進寫作 prompt 會讓 AI 出現「假歪」（為了不對稱而刻意把句子斷得詭異，像裝口吃）跟「規避型僵化」（為避開禁用詞而用更彆扭的同義替換）。所以我們不去碰寫手的 prompt，只在事後接上審查</li>
+</ul>
+
+<div class="callout">
+<strong>怎麼接：</strong>寫手寫完長文後，呼叫 <code>mcp__editor__ai_free_review</code> 工具。工具回報「【錨】1 分／【歪】2 分／【動】1 分」+ 標出 3 句最壞句子 + 改寫建議 + 一句話總結。寫手看完報告，自己改那 3 句、覆寫檔案。可跑 N 輪（<code>config.toml</code> 的 <code>[review].iterations</code>）。
+</div>
+
+<h3 id="mcp-tool-not-subagent">為什麼是 MCP 工具，不是另一個 subagent？</h3>
+
+<p>本來這個審查流程設計上自然會想做成「寫手派發 <code>審查</code> subagent」。但 Claude Agent SDK 有一條硬性架構限制：</p>
+
+<blockquote>
+The coordinator can only delegate to one level of agents; depth > 1 is ignored.
+</blockquote>
+
+<p>也就是 <strong>subagent 不能再派 subagent</strong>。寫手本身已經是 subagent，沒辦法再 fan-out 出一個審查 agent。為了讓寫手仍能保有「一版的完整 owner」這個身份（自己寫長文、自己審查改寫、自己出社群短文），審查跟社群短文這兩個流程就做成<strong>「in-process MCP tool」</strong>而不是 subagent：</p>
+
+<ul>
+  <li>從 SDK 角度，呼叫 MCP tool 跟呼叫 <code>Read</code>／<code>Write</code> 沒兩樣 — 是「工具」而非「派 agent」，所以沒有層數限制</li>
+  <li>工具的實作（<a href="agents/editor_tools.py"><code>agents/editor_tools.py</code></a>）內部各自跑一個獨立的 <code>query()</code>，吃對應的 prompt（<a href="prompts/reviewer.md"><code>reviewer.md</code></a> 或 <a href="prompts/social.md"><code>social.md</code></a>），回傳純文字結果</li>
+  <li>工具的 <code>query()</code> 走的是跟外層 pipeline 同一條 SDK 認證路徑，所以不需要額外設 <code>ANTHROPIC_API_KEY</code></li>
+  <li>對寫手來說：呼叫 <code>mcp__editor__ai_free_review(article, mode)</code> → 拿審查報告 → 自己改 → <code>Write</code>。完全沒派 subagent，但行為跟「派審查 agent」一樣</li>
+</ul>
+
+<p>同樣道理，社群短文也是工具：<code>mcp__editor__social_rewrite(article, target_length, platform, original_style)</code>。寫手拿到結果後自己 <code>Write</code> 到 <code>_social.txt</code>。</p>
+
+<p>幾個刻意做的選擇：</p>
+
+<ul>
+  <li><strong>Reviewer prompt 直接 copy 自原 skill，<u>未改寫</u></strong>：原作者用「動詞推、不要對仗、不准飄詞」這種具體禁用清單調校過的東西，動了就破壞。任何「長文 vs 社群短文標準怎麼放寬」之類的差異，都由寫手在呼叫工具時透過參數告知（例如 <code>mode="thread"</code>），不去動 reviewer 本體</li>
+  <li><strong>寫手自己改，工具不重寫整篇</strong>：寫手知道這版的角色 voice、這版引的書、這版要對齊的 angle — 工具看不到這些。所以工具只回「審查報告」，寫手拿著報告自己改</li>
+  <li><strong>固定 N 輪、不看分數收斂</strong>：LLM 自評分數會 drift（越改越給自己高分）。固定 N 輪可預測、成本可控。1 輪就能打掉最明顯的 AI 味；3 輪以上會 diminishing return</li>
+  <li><strong>補錨不亂編</strong>：reviewer 如果發現缺錨會留下 <code>【補錨：什麼時候？哪裡？跟誰？】</code> 提示。寫手用 <code>assigned_character</code> 的既有設定合理填補，不憑空捏造真實人名地址</li>
+  <li><strong>預設關閉</strong>：審查會多花 N 輪 token，所以 <code>[review].enabled = false</code> 是預設。需要再開</li>
+</ul>
+
+<h2>六個 Agent 的分工</h2>
+
+<div class="agents-grid">
+  <div class="agent-card">
+    <div class="role">Agent 1</div>
+    <div class="name">熱點 Agent</div>
+    <div class="desc">找入口：從主題拓展出讀者第一秒會停下來的關鍵詞與情感鉤子。未來會接 Thread / Dcard 爬蟲。</div>
+    <div class="model">model: haiku</div>
+  </div>
+  <div class="agent-card">
+    <div class="role">Agent 2</div>
+    <div class="name">卡點 Agent</div>
+    <div class="desc">找問題：把表面議題挖到底層。讀者真正卡住的不是「該不該 AA」，而是「AA 在親密關係裡定義了什麼是『我們』」。</div>
+    <div class="model">model: sonnet</div>
+  </div>
+  <div class="agent-card">
+    <div class="role">Agent 3</div>
+    <div class="name">角色 Agent</div>
+    <div class="desc">找人性：產出 5–7 個不同背景、立場差異大的角色。每個角色有自己的歷史、口吻、內在矛盾，讓總編輯挑來寫不同版本。</div>
+    <div class="model">model: sonnet</div>
+  </div>
+  <div class="agent-card">
+    <div class="role">Agent 4</div>
+    <div class="name">書籍 Agent</div>
+    <div class="desc">找智慧：從本地書庫（目前 9 本，未來 500+）找出能回應卡點的書與段落。<strong>這是整個系統最難的一塊</strong>，下面會詳細展開。</div>
+    <div class="model">model: opus</div>
+  </div>
+  <div class="agent-card">
+    <div class="role">Agent 5</div>
+    <div class="name">總編輯 Agent</div>
+    <div class="desc">找靈魂、做規劃：收齊前面四位的成果後，自己決定主軸、選 N 個對比強的角色、給每版指派一本書與一種敘事風格、為每版下一句獨特切入角度。<strong>他不寫稿</strong> — 把派稿單交給寫手。</div>
+    <div class="model">model: opus</div>
+  </div>
+  <div class="agent-card">
+    <div class="role">Agent 6</div>
+    <div class="name">寫手 Agent</div>
+    <div class="desc">執行成稿：每篇文章一個獨立寫手 session，<strong>N 個寫手平行跑</strong>。吃總編輯給的派稿單（角色 + 書 + 風格 + 字數 + angle）寫出長文；若派稿單帶有 <code>review</code> 欄位，自己呼叫審查工具跑 N 輪修改；若帶有 <code>social_post</code>，再呼叫社群工具並寫 _social.txt。一個寫手 = 一版的完整 owner。Context 天然隔離 — 寫第 12 版的人看不見第 11 版。</div>
+    <div class="model">model: opus · N 個平行 instance</div>
+  </div>
+  <div class="agent-card" style="border-style: dashed; background: #fffbf5;">
+    <div class="role">MCP 工具 7（事後·選用）</div>
+    <div class="name">審查工具（<code>mcp__editor__ai_free_review</code>）</div>
+    <div class="desc">事後審查：用「錨／歪／動」三維度評分中文文字的 AI 味、標出最壞 3 句、給改寫建議、一句話總結病灶。<strong>不整篇重寫</strong>。寫手拿到報告後自己改那 3 句並覆寫檔案。可跑 N 輪。Prompt 來自社群作者的 <code>ai-free-editor</code> skill，直接複製、未改寫。<strong>不是 subagent</strong>（SDK 不允許 subagent 二層 dispatch），是 in-process MCP tool — 內部跑一個獨立 <code>query()</code>。透過 <code>config.toml</code> 開關。</div>
+    <div class="model">model: sonnet · 預設關閉</div>
+  </div>
+  <div class="agent-card" style="border-style: dashed; background: #fffbf5;">
+    <div class="role">MCP 工具 8（衍生·選用）</div>
+    <div class="name">社群工具（<code>mcp__editor__social_rewrite</code>）</div>
+    <div class="desc">找鉤子：在每篇長文寫完後啟動，從原文剪出最有畫面/情緒/張力的故事片段當錨點，改寫成適合 Threads / IG / FB 的短版貼文。<strong>不是摘要，是把那顆鑽石單獨呈現</strong>。透過 <code>config.toml</code> 開關。</div>
+    <div class="model">model: sonnet · 預設關閉</div>
+  </div>
+</div>
+
+<h2>整體流程</h2>
+
+<div class="mermaid">
+flowchart TB
+  IN[使用者輸入主題<br/>例如「AA 制」]:::input
+
+  subgraph EditorialBoard ["編輯部 — claude-agent-sdk"]
+    HOT["熱點 Agent<br/>找入口、鉤子"]:::agent
+    PAIN["卡點 Agent<br/>挖底層問題"]:::agent
+    CHAR["角色 Agent<br/>產 5-7 個人物"]:::agent
+    BOOK["書籍 Agent<br/>找智慧、原文"]:::agent
+    EDITOR{{"總編輯 Agent<br/>規劃 N 版差異化<br/>派稿單 × N"}}:::editor
+    W1["寫手 #1<br/>獨立 session"]:::writer
+    W2["寫手 #2<br/>獨立 session"]:::writer
+    W3["寫手 #3<br/>獨立 session"]:::writer
+  end
+
+  IN --> HOT
+  HOT -->|topic 與 hooks| PAIN
+  PAIN -->|core_question| CHAR
+  PAIN -->|search_query| BOOK
+  CHAR --> EDITOR
+  BOOK --> EDITOR
+  EDITOR -.平行 fan-out · dispatch JSON × N.-> W1
+  EDITOR -.平行 fan-out · dispatch JSON × N.-> W2
+  EDITOR -.平行 fan-out · dispatch JSON × N.-> W3
+  REV1["審查工具<br/>(錨/歪/動 × N 輪)"]:::optional
+  REV2["審查工具<br/>(錨/歪/動 × N 輪)"]:::optional
+  REV3["審查工具<br/>(錨/歪/動 × N 輪)"]:::optional
+  W1 -. "review 開啟時" .-> REV1
+  W2 -. "review 開啟時" .-> REV2
+  W3 -. "review 開啟時" .-> REV3
+  REV1 -. "報告 / 寫手自己改" .-> W1
+  REV2 -. "報告 / 寫手自己改" .-> W2
+  REV3 -. "報告 / 寫手自己改" .-> W3
+
+  W1 --> OUT1["output_1.txt<br/>角色 A + 書 X + 故事體"]:::output
+  W2 --> OUT2["output_2.txt<br/>角色 B + 書 Y + 哲思體"]:::output
+  W3 --> OUT3["output_3.txt<br/>角色 C + 書 Z + 典故體"]:::output
+
+  SOC1["社群工具<br/>(寫手 #1 呼叫)"]:::optional
+  SOC2["社群工具<br/>(寫手 #2 呼叫)"]:::optional
+  SOC3["社群工具<br/>(寫手 #3 呼叫)"]:::optional
+  W1 -. "social_post 開啟時" .-> SOC1
+  W2 -. "social_post 開啟時" .-> SOC2
+  W3 -. "social_post 開啟時" .-> SOC3
+  SOC1 --> POST1["output_1_social.txt"]:::output
+  SOC2 --> POST2["output_2_social.txt"]:::output
+  SOC3 --> POST3["output_3_social.txt"]:::output
+
+  classDef input fill:#fef9e7,stroke:#b14d2c,stroke-width:2px,color:#1a1a1a
+  classDef agent fill:#ffffff,stroke:#6e6e6e,stroke-width:1px,color:#1a1a1a
+  classDef editor fill:#f3e3da,stroke:#b14d2c,stroke-width:2px,color:#1a1a1a
+  classDef writer fill:#fff,stroke:#3d8b6f,stroke-width:1.5px,color:#1a1a1a
+  classDef output fill:#e8f3ed,stroke:#3d8b6f,stroke-width:1px,color:#1a1a1a
+  classDef optional fill:#fffbf5,stroke:#b14d2c,stroke-width:1px,stroke-dasharray:5 3,color:#1a1a1a
+</div>
+<div class="figure-caption">圖 1：研究階段（熱點/卡點/角色/書籍）→ 規劃階段（總編輯產 N 份派稿單）→ 寫稿階段（N 個獨立寫手<strong>平行</strong>執行）。每個寫手是「一版的完整 owner」 — 自己寫長文、自己派審查（可選）、自己派社群（可選）、自己存檔。Context 天然隔離。</div>
+
+<h2 id="social">衍生：社群工具怎麼把長文剪成貼文</h2>
+
+<p>長文寫好之後，常常還想配一個社群版（Threads / IG / FB）。但是直接讓 AI 「把這篇 4000 字濃縮成 300 字」，產出來幾乎都很無聊 — 因為它在做摘要，不是做鉤子。</p>
+
+<div class="callout">
+<strong>核心觀念：</strong>社群貼文的目的是<strong>鉤人</strong>，不是傳遞資訊。所以對的做法是 — 在原文裡找出最有畫面、最有情緒、最有張力的那個 micro-story，剪下來、磨亮、單獨呈現。讀者沒看過原文也讀得懂，且讀完想去看完整版。
+</div>
+
+<h3>故事錨點要有四件事</h3>
+
+<div class="agents-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+  <div class="agent-card" style="text-align:center;">
+    <div class="role">必備 #1</div>
+    <div class="name">人物</div>
+    <div class="desc">有名字、有清楚角色（太太、他媽媽）</div>
+  </div>
+  <div class="agent-card" style="text-align:center;">
+    <div class="role">必備 #2</div>
+    <div class="name">情緒</div>
+    <div class="desc">愣住、心一沉、突然懂了</div>
+  </div>
+  <div class="agent-card" style="text-align:center;">
+    <div class="role">必備 #3</div>
+    <div class="name">場景</div>
+    <div class="desc">時間、地點、感官細節</div>
+  </div>
+  <div class="agent-card" style="text-align:center;">
+    <div class="role">必備 #4</div>
+    <div class="name">張力</div>
+    <div class="desc">A 以為 X，但 B 一句話戳穿</div>
+  </div>
+</div>
+
+<h3>四種平台、四種口吻</h3>
+
+<table>
+  <thead><tr><th>平台</th><th>節奏</th><th>結尾</th></tr></thead>
+  <tbody>
+    <tr><td><strong>threads</strong></td><td>第一行直接進現場、一句一段、大量換行、口語</td><td>留白 / 問句 / 沒答案</td></tr>
+    <tr><td><strong>ig</strong></td><td>有氛圍感、段落稍長、可以有比喻</td><td>一句 takeaway，不雞湯</td></tr>
+    <tr><td><strong>fb</strong></td><td>段落正常、可以串多個 scene、最完整</td><td>可點題或問問題引留言</td></tr>
+    <tr><td><strong>general</strong></td><td>折衷</td><td>留白</td></tr>
+  </tbody>
+</table>
+
+<h3>關鍵設計：書名整個拿掉</h3>
+
+<p>長文裡的書（《非暴力溝通》、樊登在解讀某書時說……）在社群版會被<strong>整個移除</strong>，那句智慧轉成第一人稱重述：</p>
+
+<div class="two-col">
+  <div class="col">
+    <h4>長文（直接引）</h4>
+    <p style="font-style:italic;">「樊登在解讀《非暴力溝通》時說：『我們的感受根源於我們自身的需要。』」</p>
+  </div>
+  <div class="col">
+    <h4>社群版（轉化）</h4>
+    <p style="font-style:italic;">「我朋友跟我講過一句話，我記到現在 — 你會生氣，從來不是因為對方做了什麼，是你某個需要沒被看見。」</p>
+  </div>
+</div>
+
+<p>原因：社群是「朋友式對話」的場域，引用書名會立刻出戲；硬塞書面引用節奏直接斷掉。</p>
+
+<h3>怎麼開啟</h3>
+
+<p>編輯 <code>config.toml</code>：</p>
+
+<pre><code>[social_post]
+enabled = true
+length = 300
+platform = "threads"   # 或 ig / fb / general</code></pre>
+
+<p>跑完輸出資料夾會多出 <code>output_{i}_social.txt</code>，與長文 <code>output_{i}.txt</code> 並排：</p>
+
+<pre><code>output/v3/
+├── output_1.txt          ← 完整長文
+├── output_1_social.txt   ← 衍生社群版
+├── output_2.txt
+├── output_2_social.txt
+...</code></pre>
+
+<h2 id="rag">最難的問題：書籍 Agent 怎麼真的去「查書」</h2>
+
+<p>這是整個系統的核心難題，也是最值得花時間講清楚的部分。</p>
+
+<h3>問題長什麼樣</h3>
+
+<p>「書籍 Agent」要做的事聽起來很簡單：給定一個議題（例如「AA 在親密關係裡定義了什麼是『我們』」），從書庫裡找出能回應這個議題的書，並從書裡找出可以引用的具體段落。</p>
+
+<p>但魔鬼在細節裡：</p>
+
+<div class="two-col">
+  <div class="col">
+    <h4>難題一：書太多，塞不進 AI 的腦袋</h4>
+    <p>目前書庫有 9 本書、未來計劃擴到 500+ 本。500 本逐字稿總共 ~29MB，相當於 700 萬個 token。任何 AI 模型的「記憶容量」都裝不下 — 即使是目前最大的 1M token 模型也不夠。</p>
+  </div>
+  <div class="col">
+    <h4>難題二：抽象概念，搜尋不出來</h4>
+    <p>議題是「AA 制」，但相關的書裡寫的可能是「共同體」「互依」「界線」。這些字面上完全不像，但思想上是同一回事。傳統的關鍵字搜尋抓不到這種對應。</p>
+  </div>
+</div>
+
+<div class="callout">
+如果書籍 Agent 沒做好，最常見的失敗就是：<strong>AI 開始瞎掰一本根本不在書庫裡的書</strong>。它會講「《XXX》這本書裡提到…」，但那本書其實只存在於它的記憶裡，不在我們的本地書庫。這在內容生產上是致命的 — 讀者想去找原書會找不到。
+</div>
+
+<h3>解法：兩層檢索（Two-Layer RAG）</h3>
+
+<p>我們的設計把「找書」拆成兩個截然不同的步驟，每一步用最適合它的技術：</p>
+
+<div class="mermaid">
+flowchart TD
+  Q[卡點：「AA 在親密關係裡定義了什麼是『我們』」]:::input
+
+  subgraph L1 ["第一層：概念匹配 — 讓 AI 自己讀目錄選書"]
+    direction TB
+    L1A[載入 book_index.json<br/>所有書的精簡目錄樹]
+    L1B[Opus 模型推理<br/>哪幾本書的哪些概念<br/>能回應這個卡點？]
+    L1A --> L1B
+  end
+
+  subgraph L2 ["第二層：段落檢索 — 向量搜尋找原文"]
+    direction TB
+    L2A[只在選出的 3 本書內檢索]
+    L2B[bge-m3 中文向量<br/>找最相似的逐字稿段落]
+    L2A --> L2B
+  end
+
+  Q --> L1
+  L1 -->|選出 3 本書 + 3 個概念| L2
+  L2 -->|每本書 5 個候選段落| OUT[挑出 1 段最值得引用的原文<br/>給總編輯使用]:::output
+
+  classDef input fill:#fef9e7,stroke:#b14d2c,stroke-width:2px
+  classDef output fill:#e8f3ed,stroke:#3d8b6f,stroke-width:2px
+</div>
+<div class="figure-caption">圖 2：兩層檢索 — 第一層用 LLM 抓抽象思想，第二層用向量找具體文字</div>
+
+<h3>為什麼一定要分兩層</h3>
+
+<table>
+  <thead>
+    <tr><th>層</th><th>找的是</th><th>用的技術</th><th>為什麼</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>第一層<br>（概念）</strong></td>
+      <td>「思想對應」<br><span style="color:var(--muted)">哪本書在談這個議題的本質</span></td>
+      <td>LLM 直接讀全部書的「目錄樹」<br><span style="color:var(--muted)">（精簡版 mindmap）</span></td>
+      <td>抽象概念匹配是 LLM 的強項。「AA」要連到「共同體」需要推理，不是字面比對。</td>
+    </tr>
+    <tr>
+      <td><strong>第二層<br>（段落）</strong></td>
+      <td>「可引用原文」<br><span style="color:var(--muted)">具體哪段話最能支撐論點</span></td>
+      <td>向量搜尋<br>（bge-m3 + chromadb）</td>
+      <td>具體文字匹配是向量的強項。資料量大（500 本 ~6 萬段）只能用向量過濾。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>如果只用第一層 LLM 推理：模型很容易「想到對的方向，但編出不存在的原文」（也就是 hallucination）。</p>
+
+<p>如果只用第二層向量搜尋：抓得到字面相關的段落，但抓不到抽象思想對應 — 因為「親密關係的共同體」跟「AA」字面差太遠。</p>
+
+<p>兩層配合，才能既抓對方向，又拿到真實原文。</p>
+
+<h3>容量怎麼撐到 500 本？</h3>
+
+<div class="stat-row">
+  <div class="stat">
+    <div class="num">9</div>
+    <div class="label">目前書庫</div>
+  </div>
+  <div class="stat">
+    <div class="num">500+</div>
+    <div class="label">目標規模</div>
+  </div>
+  <div class="stat">
+    <div class="num">~750KB</div>
+    <div class="label">500 本目錄樹大小</div>
+  </div>
+  <div class="stat">
+    <div class="num">~190K</div>
+    <div class="label">tokens（仍可塞入）</div>
+  </div>
+</div>
+
+<p>關鍵技巧：<strong>第一層只塞「精簡目錄樹」，不塞全文</strong>。每本書原本的逐字稿是 ~58KB，但目錄樹只有 ~1.5KB（標題 + 章節 + 重點概念）。500 本目錄樹加起來 750KB，相當於 19 萬 token，仍能完全塞進 1M context 的 Opus 模型一次讀完。</p>
+
+<p>逐字稿則完全不進入 prompt — 它們躺在向量資料庫裡，第二層只取出 query 命中的段落（每次 ~15 段，~8K token）。</p>
+
+<div class="callout">
+  <strong>規模上限預估：</strong>≤ 500 本可單次塞入；500–1000 本需要再加一層「類別過濾」（先選類別再選書）；&gt; 1000 本需要更精緻的多階段檢索。當前設計把 hooks 留好（每本書的 metadata 已經有 tags 欄位），未來擴充不需要改 pipeline。
+</div>
+
+<h2>書庫怎麼準備（一次性 index 建置）</h2>
+
+<p>每本書放進系統時，會跑一次預處理腳本 <code>scripts/build_index.py</code>，做兩件事：</p>
+
+<div class="mermaid">
+flowchart LR
+  IN[book_data/<br/>每本書一個資料夾<br/>含 mindmap.json + transcript.json]:::input
+
+  subgraph STEP ["build_index.py"]
+    direction TB
+    A[讀 mindmap.json<br/>壓掉 type/label noise]
+    B[讀 transcript.json<br/>剝 HTML, 切 500 字 chunks]
+  end
+
+  IN --> A
+  IN --> B
+  A --> OUT1[index/book_index.json<br/>所有書的精簡目錄樹<br/>給第一層 LLM 讀]:::output
+  B --> OUT2[index/chroma.sqlite3<br/>所有書的逐字稿向量<br/>給第二層搜尋]:::output
+
+  classDef input fill:#fef9e7,stroke:#b14d2c
+  classDef output fill:#e8f3ed,stroke:#3d8b6f
+</div>
+<div class="figure-caption">圖 3：書庫只要 index 一次，加新書時只需增量重建</div>
+
+<p>用的中文向量模型是 <code>BAAI/bge-m3</code>（在中文語意檢索上是目前最強的開源模型之一）。本地跑，零成本，一次 index 9 本書約 1 分鐘，500 本約 30 分鐘。</p>
+
+<h2>實際執行案例：以「AA 制」為例</h2>
+
+<p>把這個流程跑一次，核心六個 agent 之間實際傳遞了什麼：</p>
+
+<table>
+  <thead><tr><th>Agent</th><th>輸入</th><th>輸出（精簡）</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>熱點</strong></td>
+      <td>「AA 制」</td>
+      <td>關鍵詞：婚後 AA、公平、家務分配；鉤子：「婚禮誓言裡沒有一句是各付各的」</td>
+    </tr>
+    <tr>
+      <td><strong>卡點</strong></td>
+      <td>熱點輸出</td>
+      <td>核心問題：「AA 在親密關係裡定義了什麼是『我們』？」<br>給書籍的搜尋詞：「親密關係 共同體 界線 互依」</td>
+    </tr>
+    <tr>
+      <td><strong>角色</strong></td>
+      <td>熱點+卡點</td>
+      <td>佳蓉（婚前 AA 擁護者，婚後懷疑）、雅婷（產後憂鬱、收入斷層）、家瑋（婚禮念過誓詞的丈夫）……共 5–7 個</td>
+    </tr>
+    <tr>
+      <td><strong>書籍</strong></td>
+      <td>卡點的搜尋詞</td>
+      <td>第一層讀目錄選 3 本：《非暴力溝通》《親密關係》《關鍵對話》<br>第二層找原文，每本回 1 段可引用內容</td>
+    </tr>
+    <tr>
+      <td><strong>總編輯</strong></td>
+      <td>以上全部</td>
+      <td>挑 3 個對比鮮明的角色 × 3 本書 × 3 種風格，寫出 3 個 4000 字長文</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="stat-row">
+  <div class="stat">
+    <div class="num">$1.12</div>
+    <div class="label">2 版本實測成本</div>
+  </div>
+  <div class="stat">
+    <div class="num">7.5 min</div>
+    <div class="label">2 版本實測時間</div>
+  </div>
+  <div class="stat">
+    <div class="num">9 turns</div>
+    <div class="label">總編輯來回 9 次</div>
+  </div>
+  <div class="stat">
+    <div class="num">3 calls</div>
+    <div class="label">passage_search 呼叫</div>
+  </div>
+</div>
+
+<h2>目前的限制與下一步</h2>
+
+<ul>
+  <li><strong>熱點 Agent 是 stub</strong>：目前只是把使用者輸入的主題往下傳。下一步接 Thread / Dcard 爬蟲，自動找熱貼、抓鉤子。</li>
+  <li><strong>書籍 hallucination 偶發</strong>：即使 prompt 嚴格寫了「只能引用本地書庫」，模型偶爾還是會把它記憶中的書混進來。需要在最後加一個 programmatic 驗證層 — 自動掃描輸出檔，把任何不在書庫裡的書名標出來。</li>
+  <li><strong>研究階段仍循序執行</strong>：熱點 → 卡點 → 角色 → 書籍 是依序的（後者依賴前者輸出）。書籍跟角色其實可以併行（都只依賴卡點），未來會優化。</li>
+  <li><strong>沒有自動評估</strong>：目前靠人工比對 example 樣本判斷品質。未來可以加一個「品質 agent」自動打分（開頭抓人度、卡點深度、引用真實性、字數合理性、N 版之間的差異化程度）。</li>
+</ul>
+
+<h2>系統元件總覽</h2>
+
+<div class="mermaid">
+flowchart TB
+  CLI[main.py CLI]:::ui
+
+  subgraph PIPE ["pipeline.py"]
+    ORCH[總編輯 query loop<br/>claude-agent-sdk]:::core
+  end
+
+  subgraph SUBS ["agents/ — 5 個 subagent"]
+    SA1[熱點]:::agent
+    SA2[卡點]:::agent
+    SA3[角色]:::agent
+    SA4[書籍]:::agent
+    SA5[寫手 × N<br/>平行]:::agent
+  end
+
+  subgraph TOOLS ["agents/editor_tools.py — MCP 工具（選用）"]
+    T1[ai_free_review<br/>審查工具]:::optional
+    T2[social_rewrite<br/>社群工具]:::optional
+  end
+
+  subgraph RAG ["rag/ — 檢索層"]
+    R1[mindmap_pack.py<br/>樹狀圖壓縮]:::rag
+    R2[chunker.py<br/>HTML 剝 + 切段]:::rag
+    R3[embed.py<br/>bge-m3 向量化]:::rag
+    R4[search.py<br/>chromadb 查詢]:::rag
+  end
+
+  subgraph DATA ["index/"]
+    D1[(book_index.json<br/>概念層)]:::data
+    D2[(chroma.sqlite3<br/>段落層向量庫)]:::data
+  end
+
+  CLI --> ORCH
+  ORCH --> SA1
+  ORCH --> SA2
+  ORCH --> SA3
+  ORCH --> SA4
+  ORCH -->|fan-out × N| SA5
+  SA5 -. "review 開啟時呼叫" .-> T1
+  SA5 -. "social_post 開啟時呼叫" .-> T2
+  SA4 -->|Read| D1
+  SA4 -->|passage_search 工具| R4
+  R4 --> D2
+  R3 -.建index時.-> D2
+  R1 -.建index時.-> D1
+  R2 -.建index時.-> D2
+
+  classDef ui fill:#fef9e7,stroke:#b14d2c
+  classDef core fill:#f3e3da,stroke:#b14d2c,stroke-width:2px
+  classDef agent fill:#ffffff,stroke:#6e6e6e
+  classDef optional fill:#fffbf5,stroke:#b14d2c,stroke-dasharray:5 3
+  classDef rag fill:#f5f2ec,stroke:#6e6e6e
+  classDef data fill:#e8f3ed,stroke:#3d8b6f
+</div>
+<div class="figure-caption">圖 4：完整系統元件對應</div>
+
+<h2>關鍵設計抉擇</h2>
+
+<table>
+  <thead><tr><th>選擇</th><th>為什麼</th></tr></thead>
+  <tbody>
+    <tr><td>多 Agent，不是單一 prompt</td><td>每個視角專注，總體品質高於混合單一 agent</td></tr>
+    <tr><td>用 Claude Agent SDK，不是自己 wrap API</td><td>SDK 已經處理了 subagent dispatch、context 隔離、工具呼叫等基礎建設</td></tr>
+    <tr><td>第一層用 LLM 而非向量</td><td>抽象思想對應 embedding 抓不到，必須讓 LLM 推理</td></tr>
+    <tr><td>第二層用向量而非 LLM</td><td>具體文字匹配 + 大量資料 only embedding 撐得住</td></tr>
+    <tr><td>本地 bge-m3 而非雲端 embedding</td><td>中文 SOTA、零成本、500 本一次性 index 30 分鐘</td></tr>
+    <tr><td>Opus 給總編輯與書籍，Sonnet 給其他</td><td>總編輯與抽象書籍選擇需要強推理；其他工作 Sonnet 夠用，省成本</td></tr>
+    <tr><td>社群／審查做成 MCP 工具，不是 subagent</td><td>SDK 不允許 subagent 二層 dispatch。改用 in-process MCP tool（內部各跑一個獨立 <code>query()</code>），讓寫手仍能「自己接管這版的完整流程」— 工具 vs subagent 對使用者體驗一樣，但繞過架構限制</td></tr>
+    <tr><td>社群工具寫一篇呼叫一篇，不批次</td><td>每寫完一版立刻呼叫剪短，避免上下文遺失。批次處理會讓社群工具看不到原文細節</td></tr>
+    <tr><td>社群版主動移除書名</td><td>社群是「朋友式對話」場域，書面引用會立刻出戲、節奏斷掉</td></tr>
+    <tr><td>審查者只回報告、不整篇重寫</td><td>整篇重寫會丟失寫手手上的角色 voice / 書的引用方式。讓寫手拿著報告自己改那 3 句，保留 context</td></tr>
+    <tr><td>Reviewer prompt 直接 copy 自外部 skill，未改寫</td><td>原作者調校過的「禁用詞清單」是這個工具的命脈。改寫就破壞、且 ai-free-editor 還在演進，未來可直接 sync 上游</td></tr>
+  </tbody>
+</table>
+
+<footer>
+  <p>book-article-gen ｜ 多 Agent 文章生成系統 ｜ 基於 Claude Agent SDK</p>
+  <p>系統檔案位於 <code>/Users/josephsyu/Not_In_Icloud/Vicky_Assistant/book_article_gen/</code></p>
+</footer>
+
+</div>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      'fontFamily': 'PingFang TC, Noto Sans TC, sans-serif',
+      'fontSize': '14px',
+      'primaryColor': '#fafaf7',
+      'primaryTextColor': '#1a1a1a',
+      'primaryBorderColor': '#6e6e6e',
+      'lineColor': '#6e6e6e',
+      'secondaryColor': '#f3e3da',
+      'tertiaryColor': '#e8f3ed'
+    },
+    flowchart: { curve: 'basis', padding: 20 }
+  });
+</script>
+
+</body>
+</html>
