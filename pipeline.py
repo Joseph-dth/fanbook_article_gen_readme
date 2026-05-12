@@ -150,6 +150,7 @@ async def run_pipeline(
             "mcp__editor__social_rewrite",
         ],
         permission_mode="bypassPermissions",
+        setting_sources=[],  # don't inject CLAUDE.md / .claude settings into orchestrator or subagents
     )
 
     user_prompt = _build_user_prompt(topic, versions, output_dir, slug, config)

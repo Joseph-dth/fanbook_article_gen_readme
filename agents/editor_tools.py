@@ -44,6 +44,7 @@ async def _ask_via_sdk(*, system_prompt: str, user_prompt: str, model: str) -> s
         model=model,
         cwd=str(ROOT),
         permission_mode="bypassPermissions",
+        setting_sources=[],  # don't inject CLAUDE.md into the inner review/social query
         # No allowed_tools — we want a pure text response.
     )
 
